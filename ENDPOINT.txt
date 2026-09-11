@@ -1,0 +1,50 @@
+ENDPOINTS - API REST
+GA7-220501096-AA5-EV02
+
+Proyecto: API REST para registro y autenticación de usuarios
+Tecnologías: Node.js + Express
+
+1. GET /
+URL: http://localhost:3000/
+
+Descripción:
+Permite comprobar que el servidor de la API se encuentra funcionando correctamente.
+
+Respuesta esperada:
+"API REST funcionando correctamente"
+
+
+2. POST /api/registro
+URL: http://localhost:3000/api/registro
+
+Descripción:
+Permite registrar un nuevo usuario en la API.
+
+Datos enviados:
+{
+    "usuario": "nicolas2",
+    "password": "123456"
+}
+
+Respuesta esperada:
+"Usuario recibido correctamente"
+
+
+3. POST /api/login
+URL: http://localhost:3000/api/login
+
+Descripción:
+Permite verificar las credenciales de un usuario registrado.
+
+Datos enviados:
+{
+    "usuario": "nicolas2",
+    "password": "123456"
+}
+
+Respuesta cuando las credenciales son correctas:
+"Autenticación satisfactoria"
+
+Respuesta cuando las credenciales son incorrectas:
+"Error en la autenticación"
+Código HTTP: 401 Unauthorized
